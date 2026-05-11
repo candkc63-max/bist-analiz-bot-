@@ -69,8 +69,9 @@ app.post('/webhook', async (req, res) => {
   }
 });
 
-// Sağlık kontrolü
+// Sağlık kontrolü + ManyChat URL doğrulama
 app.get('/health', (_, res) => res.json({ status: 'ok' }));
+app.get('/webhook', (_, res) => res.json({ status: 'ok', version: 'v2' }));
 
 // ManyChat response formatı
 function mcResponse(text) {
