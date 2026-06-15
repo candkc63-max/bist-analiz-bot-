@@ -1,6 +1,9 @@
-import { analyzeTrade } from "../../../lib/openai.js";
-import { sendTelegramMessage } from "../../../lib/telegram.js";
-import { validateWebhookPayload } from "../../../lib/validate.js";
+import { analyzeTrade } from "../../../lib/openai";
+import { sendTelegramMessage } from "../../../lib/telegram";
+import { validateWebhookPayload } from "../../../lib/validate";
+
+/** Node.js runtime gerekli (OpenAI SDK) */
+export const runtime = "nodejs";
 
 /**
  * TradingView webhook endpoint.
